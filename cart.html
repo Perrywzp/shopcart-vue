@@ -74,10 +74,9 @@
                             <div class="cart-tab-1">
                                 <!-- 单选 -->
                                 <div class="cart-item-check">
-                                    <a href="javascipt:;" class="item-check-btn">
-                                        <svg class="icon icon-ok">
-                                            <use xlink:href="#icon-ok"></use>
-                                        </svg>
+                                    <a href="javascipt:;" class="item-check-btn"  :classs="{'check': item.checked}"
+                                       @click="selectedProduct(item)">
+                                        <svg class="icon icon-ok"> <use xlink:href="#icon-ok"></use> </svg>
                                     </a>
                                 </div>
                                 <!-- 商品图片 -->

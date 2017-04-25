@@ -33,6 +33,14 @@ var vm = new Vue({
             this.totalMoney = this.productList.map((x)=>{
                 return x.productQuentity * x.productPrice;
             }).reduce((x,y)=>{return x+y;})
+        },
+        selectedProduct: function (item){
+            if(typeof item.checked == 'undefined'){
+                // Vue.set(item, "checked", true);
+                this.$set(item, "checked", true);
+            }else{
+                item.checked = !item.checked;
+            }
         }
     }
 });
